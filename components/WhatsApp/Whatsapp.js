@@ -16,6 +16,7 @@ export default function Whatsapp() {
                 width={80}
                 height={80}
                 className="rounded-full"
+                priority
             />
         </Link>
     );
