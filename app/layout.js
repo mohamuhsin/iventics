@@ -1,6 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Whatsapp from "@/components/WhatsApp/Whatsapp";
+import { Analytics } from "@vercel/analytics/react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`${montserrat.variable} antialiased`}>
         {children}
         <Whatsapp />
+        <Analytics />
       </body>
     </html>
   );
