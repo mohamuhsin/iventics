@@ -12,9 +12,9 @@ export default function Hero() {
                     Simplifying Lives Digitally.
                 </p>
                 <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto">
-                    We create innovative digital solutions that help businesses thrive,
-                    transform online engagement, and improve user experiences. Let&apos;s
-                    innovate together.
+                    We simplify lives with innovative digital solutions, enhancing
+                    businesses through web and mobile apps. Let’s transform your digital
+                    experience together.
                 </p>
                 <Link
                     href="mailto:info@iventics.com"
