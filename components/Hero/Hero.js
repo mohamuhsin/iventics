@@ -8,7 +8,7 @@ export default function Hero() {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
                     Iventics Technologies
                 </h1>
-                <p className="text-xl sm:text-2xl md:text-3xl font-light mx-auto">
+                <p className="text-xl sm:text-2xl md:text-3xl font-light mx-auto italic">
                     Simplifying Lives Digitally.
                 </p>
                 <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto">
