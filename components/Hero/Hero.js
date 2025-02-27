@@ -1,7 +1,15 @@
 import Link from "next/link";
+import { track } from "@vercel/analytics";
 
 // Hero.js
 export default function Hero() {
+    const handleTrackClick = () => {
+        track("Contact Button Clicked", {
+            location: "Hero Section",
+            method: "Email",
+        });
+    };
+
     return (
         <section className="relative flex items-center justify-center text-center px-6 py-40 bg-gradient-to-r from-[#1e3a8a] to-[#10b981] overflow-hidden">
             <div className="text-white space-y-6 z-10 max-w-4xl mx-auto">
@@ -14,10 +22,11 @@ export default function Hero() {
                 <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto">
                     We simplify lives with innovative digital solutions, enhancing
                     businesses through web and mobile apps. Let’s transform your digital
-                    experience together.
+                    experience today!
                 </p>
                 <Link
                     href="mailto:info@iventics.com"
+                    onClick={handleTrackClick}
                     className="inline-block bg-[#10b981] text-white py-3 px-6 rounded-lg text-lg sm:text-xl md:text-2xl font-semibold hover:bg-[#34d399] transition-all duration-300 transform hover:scale-105"
                 >
                     Get In Touch
