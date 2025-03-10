@@ -19,15 +19,16 @@ export default function Whatsapp() {
             rel="noopener noreferrer"
             aria-label="Chat with us on WhatsApp"
             onClick={handleTrackClick}
-            className="whatsapp-button fixed bottom-6 right-6 z-50 rounded-full shadow-lg p-4 transition-all"
+            className="whatsapp-button"
         >
             <Image
                 src="/whatsapp.png"
-                alt="WhatsApp"
-                width={80}
-                height={80}
-                className="rounded-full"
+                alt="Chat with us on WhatsApp"
+                width={60}
+                height={60}
+                className="sm:w-16 sm:h-16 md:w-20 md:h-20"
                 priority
+                aria-label="WhatsApp Icon"
             />
         </Link>
     );
