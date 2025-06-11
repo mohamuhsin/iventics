@@ -2,37 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
+  /* Use DaisyUI theme variables */
+  color: var(--base-content);
+  background-color: var(--base-100);
   font-family: "Montserrat", sans-serif;
 }
 
-/* In your global.css */
-
+/* Your whatsapp-button styles below */
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: #25d366;
   border-radius: 50%;
-  padding: 20px; /* Increase padding for bigger icon */
+  padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   transition: all 0.3s ease;
-  animation: pulse 1.5s infinite; /* Continuous pulse animation */
+  animation: pulse 1.5s infinite;
 }
 
 .whatsapp-button:hover {
@@ -45,7 +33,7 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1); /* Increase size */
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);
@@ -57,5 +45,5 @@ body {
 }
 
 .whatsapp-button:hover img {
-  transform: scale(1.1); /* Image scaling on hover */
+  transform: scale(1.1);
 }
