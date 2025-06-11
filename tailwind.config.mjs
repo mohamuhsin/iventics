@@ -7,7 +7,15 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "dots-pattern":
+          "radial-gradient(circle, rgba(0, 0, 0, 0.06) 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        "dots-size": "18px 18px",
+      },
+    },
   },
   plugins: [daisyui],
   daisyui: {

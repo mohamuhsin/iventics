@@ -47,3 +47,21 @@ body {
 .whatsapp-button:hover img {
   transform: scale(1.1);
 }
+
+/* 🔵 Custom background utility */
+@layer utilities {
+  .bg-dots {
+    background-image: radial-gradient(
+      var(--tw-dot-color, #000) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+    background-position: center;
+    opacity: 0.06;
+  }
+
+  .dark .bg-dots {
+    --tw-dot-color: #fff;
+    opacity: 0.04;
+  }
+}
