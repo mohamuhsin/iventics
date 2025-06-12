@@ -4,16 +4,18 @@ export const navItems = [
     {
         label: "Services",
         children: [
-            { label: "Web Development", href: "/services" },
-            { label: "Mobile Apps", href: "/services" },
+            { label: "Web & Mobile Apps", href: "/services" },
+            { label: "API Development", href: "/services" },
+            { label: "Payment Integration", href: "/services" },
+            { label: "Custom Solution", href: "/services" },
         ],
     },
     {
         label: "Solutions",
         children: [
             { label: "SMS Platform", href: "/solutions" },
-            { label: "Voting System", href: "/solutions" },
-            { label: "PMS System", href: "/solutions" },
+            { label: "Voting Platform", href: "/solutions" },
+            { label: "PMS Platform", href: "/solutions" },
             { label: "Charity Platform", href: "/solutions" },
         ],
     },
