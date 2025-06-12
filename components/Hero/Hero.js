@@ -14,14 +14,14 @@ export default function Hero() {
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 {/* Left Side: Hero Text */}
                 <div className="text-center lg:text-left space-y-8">
-                    <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-base-content leading-tight">
+                    <h1 className="text-5xl sm:text-6xl md:text-[4.5rem] font-extrabold tracking-tight text-base-content leading-tight">
                         Simplifying Lives Digitally.
                     </h1>
 
                     <p className="text-lg md:text-xl text-base-content/70 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                        We build scalable platforms, intuitive mobile apps, and seamless
-                        payment systems — transforming businesses across Africa with purpose
-                        and trust.
+                        We simplify lives through innovative digital platforms, intuitive
+                        mobile apps, and seamless payment systems — backed by trusted ICT
+                        services that empower businesses across Africa.
                     </p>
 
                     <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">
@@ -41,22 +41,22 @@ export default function Hero() {
                     <FeatureCard
                         icon={<ShieldCheck className="w-6 h-6 text-primary" />}
                         title="Secure Systems"
-                        description="We prioritize your data, security, and platform reliability."
+                        description="We engineer secure platforms with robust infrastructure and data protection."
                     />
                     <FeatureCard
                         icon={<Smartphone className="w-6 h-6 text-secondary" />}
-                        title="Mobile First"
-                        description="Modern apps that run fast and feel native on any device."
+                        title="Mobile-First Apps"
+                        description="Intuitive, fast, and responsive mobile experiences for every device."
                     />
                     <FeatureCard
                         icon={<ServerCog className="w-6 h-6 text-accent" />}
-                        title="Custom Platforms"
-                        description="Digitally transform your workflows with tailored software."
+                        title="Custom ICT Solutions"
+                        description="Tailored enterprise software and IT services that streamline operations."
                     />
                     <FeatureCard
                         icon={<CreditCard className="w-6 h-6 text-info" />}
-                        title="Payment Solutions"
-                        description="Integrate Airtel & MTN payments, collections, and APIs."
+                        title="Seamless Payments"
+                        description="We integrate MTN & Airtel Money, collections, APIs, and billing flows."
                     />
                 </div>
             </div>
