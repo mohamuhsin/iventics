@@ -10,7 +10,17 @@ import {
 
 export default function Hero() {
     return (
-        <section className="min-h-screen px-6 sm:px-12 lg:px-24 py-28 flex items-center bg-premium bg-gradient-to-br from-[#fdfcfb] to-[#e2d1c3] dark:from-[#1e1e1e] dark:to-[#2e2e2e] transition-colors duration-500">
+        <section
+            className="
+        min-h-screen px-6 sm:px-12 lg:px-24 py-28 flex items-center
+        bg-mesh-grid
+        bg-gradient-to-br
+        from-[#fdfcfb] to-[#e2d1c3]
+        dark:from-[#1e1e1e] dark:to-[#2e2e2e]
+        transition-colors duration-500
+        animate-fade-in-up
+      "
+        >
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 {/* Left Side: Hero Text */}
                 <div className="text-center lg:text-left space-y-8">
@@ -18,7 +28,8 @@ export default function Hero() {
                         Simplifying Lives Digitally.
                     </h1>
 
-                    <p className="text-lg md:text-xl text-base-content/70 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    {/* Increased font size here */}
+                    <p className="text-xl md:text-2xl text-base-content/80 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                         We simplify lives through innovative digital platforms, intuitive
                         mobile apps, and seamless payment systems — backed by trusted ICT
                         services that empower businesses across Africa.
@@ -41,22 +52,22 @@ export default function Hero() {
                     <FeatureCard
                         icon={<ShieldCheck className="w-6 h-6 text-primary" />}
                         title="Secure Systems"
-                        description="We engineer secure platforms with robust infrastructure and data protection."
+                        description="We build robust, secure digital systems that protect your data and ensure uptime."
                     />
                     <FeatureCard
                         icon={<Smartphone className="w-6 h-6 text-secondary" />}
                         title="Mobile-First Apps"
-                        description="Intuitive, fast, and responsive mobile experiences for every device."
+                        description="Our apps are fast, modern, and optimized for all devices and screen sizes."
                     />
                     <FeatureCard
                         icon={<ServerCog className="w-6 h-6 text-accent" />}
                         title="Custom ICT Solutions"
-                        description="Tailored enterprise software and IT services that streamline operations."
+                        description="We tailor software and IT services that simplify workflows and increase efficiency."
                     />
                     <FeatureCard
                         icon={<CreditCard className="w-6 h-6 text-info" />}
                         title="Seamless Payments"
-                        description="We integrate MTN & Airtel Money, collections, APIs, and billing flows."
+                        description="We integrate mobile money, billing systems, and APIs with smooth user flows."
                     />
                 </div>
             </div>
@@ -66,14 +77,18 @@ export default function Hero() {
 
 function FeatureCard({ icon, title, description }) {
     return (
-        <div className="bg-base-100 border border-base-300 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.025]">
-            <div className="flex items-center gap-4 mb-3">
-                <div className="bg-base-300 p-3 rounded-xl">{icon}</div>
-                <h3 className="text-lg font-semibold text-base-content">{title}</h3>
+        <div className="card bg-base-100 shadow-md border border-base-300 transition duration-300 hover:shadow-xl hover:scale-[1.03] hover:-translate-y-1 group">
+            <div className="card-body p-5">
+                <div className="flex items-center gap-4 mb-3">
+                    <div className="bg-base-300 p-3 rounded-xl group-hover:animate-pulse transition">
+                        {icon}
+                    </div>
+                    <h3 className="text-lg font-semibold text-base-content">{title}</h3>
+                </div>
+                <p className="text-sm text-base-content/70 leading-relaxed">
+                    {description}
+                </p>
             </div>
-            <p className="text-base text-base-content/70 leading-relaxed">
-                {description}
-            </p>
         </div>
     );
 }
