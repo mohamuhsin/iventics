@@ -1,3 +1,4 @@
+// tailwind.config.js
 import daisyui from "daisyui";
 
 export default {
@@ -10,7 +11,7 @@ export default {
     extend: {
       backgroundImage: {
         "dots-pattern":
-          "radial-gradient(circle, rgba(0, 0, 0, 0.06) 1px, transparent 1px)",
+          "radial-gradient(circle, rgba(0, 0, 0, 0.08) 1px, transparent 1px)",
       },
       backgroundSize: {
         "dots-size": "18px 18px",

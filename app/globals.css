@@ -3,13 +3,20 @@
 @tailwind utilities;
 
 body {
-  /* Use DaisyUI theme variables */
-  color: var(--base-content);
-  background-color: var(--base-100);
   font-family: "Montserrat", sans-serif;
 }
 
-/* Your whatsapp-button styles below */
+@layer utilities {
+  .bg-premium {
+    @apply bg-[length:20px_20px] bg-[radial-gradient(#bbb_1px,transparent_1px)];
+  }
+
+  .dark .bg-premium {
+    background-image: radial-gradient(#444 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+/* WhatsApp Button (unchanged) */
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
@@ -29,39 +36,11 @@ body {
 }
 
 @keyframes pulse {
-  0% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
     transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.whatsapp-button img {
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-button:hover img {
-  transform: scale(1.1);
-}
-
-/* 🔵 Custom background utility */
-@layer utilities {
-  .bg-dots {
-    background-image: radial-gradient(
-      var(--tw-dot-color, #000) 1px,
-      transparent 1px
-    );
-    background-size: 24px 24px;
-    background-position: center;
-    opacity: 0.06;
-  }
-
-  .dark .bg-dots {
-    --tw-dot-color: #fff;
-    opacity: 0.04;
   }
 }
