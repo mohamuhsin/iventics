@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Whatsapp from "@/components/WhatsApp/Whatsapp";
 import { Analytics } from "@vercel/analytics/react";
-import { Providers } from "./store/providers";
+import Providers from "./store/providers";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 

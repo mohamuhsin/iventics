@@ -1,6 +1,6 @@
-// tailwind.config.js
 import daisyui from "daisyui";
 
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,6 +15,15 @@ export default {
       },
       backgroundSize: {
         "dots-size": "18px 18px",
+      },
+      keyframes: {
+        pulseCustom: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.1)" },
+        },
+      },
+      animation: {
+        pulseCustom: "pulseCustom 1.5s infinite",
       },
     },
   },

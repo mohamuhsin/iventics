@@ -1,11 +1,141 @@
+"use client";
+
+import Link from "next/link";
+import ThemeToggle from "../Navbar/ThemeToggle";
+
 export default function Footer() {
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     return (
-        <footer className="footer footer-center p-8 bg-base-200 text-base-content shadow-[0_6px_12px_rgba(0,0,0,0.25)]">
-            <div>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light">
-                    &copy; 2025 Iventics Technologies. All Rights Reserved.
-                </p>
-            </div>
-        </footer>
+        <>
+            <footer className="bg-base-200 text-base-content font-sans">
+                {/* Top Section */}
+                <div className="footer sm:footer-horizontal p-10 border-b border-base-300 dark:border-base-100">
+                    <aside>
+                        <svg
+                            width="50"
+                            height="50"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            className="fill-current text-primary"
+                        >
+                            <path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
+                        </svg>
+                        <p className="text-base leading-relaxed">
+                            IVENTICS TECHNOLOGIES LTD
+                            <br />
+                            Simplifying Lives through
+                            <br />
+                            Digital Innovative Solutions and
+                            <br />
+                            Trusted ICT Services and Solutions.
+                        </p>
+                    </aside>
+                    <nav>
+                        <h6 className="footer-title text-base font-semibold mb-2">
+                            Services
+                        </h6>
+                        <Link href="#" className="link link-hover text-base">
+                            Web & Mobile Applications
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            API & Payment Integration
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            ICT Services and Solutions
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            Telecom Services and Solutions
+                        </Link>
+                    </nav>
+                    <nav>
+                        <h6 className="footer-title text-base font-semibold mb-2">
+                            Solutions
+                        </h6>
+                        <Link href="#" className="link link-hover text-base">
+                            SMS Plaform
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            Voting Plaform
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            PMS Plaform
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            Charity Plaform
+                        </Link>
+                    </nav>
+                    <nav>
+                        <h6 className="footer-title text-base font-semibold mb-2">
+                            Company
+                        </h6>
+                        <Link href="#" className="link link-hover text-base">
+                            About Us
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            Contact
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            Case Studies
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            Testimonials
+                        </Link>
+                    </nav>
+                    <nav>
+                        <h6 className="footer-title text-base font-semibold mb-2">Legal</h6>
+                        <Link href="#" className="link link-hover text-base">
+                            Terms of use
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            Privacy policy
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            Cookie policy
+                        </Link>
+                        <Link href="#" className="link link-hover text-base">
+                            Accessibility Statement
+                        </Link>
+                    </nav>
+                </div>
+
+                {/* Bottom Section */}
+                <div className="footer footer-center p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p className="text-base text-center">
+                        &copy; 2025 Iventics Technologies. All Rights Reserved.
+                    </p>
+                    <ThemeToggle />
+                </div>
+            </footer>
+
+            {/* Back to Top Button */}
+            <button
+                onClick={scrollToTop}
+                aria-label="Back to top"
+                type="button"
+                className="
+          fixed bottom-6 right-6 z-[9999]
+          w-12 h-12
+          bg-gray-900 text-white
+          dark:bg-gray-100 dark:text-gray-900
+          rounded-full
+          shadow-md
+          flex items-center justify-center
+          transition-colors duration-300 ease-in-out
+          hover:bg-gray-700 dark:hover:bg-gray-300
+          focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2
+          cursor-pointer select-none
+          text-2xl
+          font-semibold
+          leading-none
+        "
+            >
+                ↑
+            </button>
+        </>
     );
 }
