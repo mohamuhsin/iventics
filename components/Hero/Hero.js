@@ -22,7 +22,7 @@ export default function Hero() {
             className="
         relative 
         min-h-[80vh] sm:min-h-screen 
-        px-6 sm:px-12 lg:px-24 xl:px-32 2xl:px-40 
+        px-6 sm:px-12 lg:px-24 
         py-20 sm:py-24 lg:py-28 
         flex items-center 
         bg-mesh-grid 
@@ -42,7 +42,7 @@ export default function Hero() {
             <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 {/* Left Side: Hero Text */}
                 <div
-                    className="text-center lg:text-left space-y-8 max-w-lg mx-auto lg:mx-0"
+                    className="text-center lg:text-left space-y-8"
                     data-aos="fade-right"
                 >
                     <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-2">
@@ -53,7 +53,7 @@ export default function Hero() {
                         Simplifying Lives Digitally.
                     </h1>
 
-                    <p className="text-lg md:text-xl text-base-content/70 leading-relaxed">
+                    <p className="text-lg md:text-xl text-base-content/70 max-w-lg mx-auto lg:mx-0 leading-relaxed">
                         We simplify lives through innovative digital platforms, intuitive
                         mobile apps, and seamless payment systems — backed by trusted ICT
                         services that empower businesses across Africa.
@@ -96,13 +96,7 @@ export default function Hero() {
                 </div>
 
                 {/* Right Side: Feature Cards */}
-                <div
-                    className="
-            grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 
-            max-w-lg mx-auto lg:mx-0
-          "
-                    data-aos="fade-left"
-                >
+                <div className="grid grid-cols-2 gap-6 sm:gap-8" data-aos="fade-left">
                     <FeatureCard
                         icon={<ShieldCheck className="w-6 h-6 text-primary" />}
                         title="Secure Systems"
@@ -148,10 +142,7 @@ export default function Hero() {
 function FeatureCard({ icon, title, description }) {
     return (
         <div
-            className="
-        card bg-base-100 shadow-sm border border-base-300 
-        transition-all duration-500 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 group
-      "
+            className="card bg-base-100 shadow-sm border border-base-300 transition-all duration-500 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-0.5 group"
             data-aos="zoom-in-up"
         >
             <div className="card-body p-5">
