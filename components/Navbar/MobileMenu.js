@@ -7,10 +7,7 @@ import { navItems } from "./navConfig";
 export default function MobileMenu({ onClose }) {
     // Lock scroll when menu is open
     useEffect(() => {
-        // Disable body scroll
         document.body.style.overflow = "hidden";
-
-        // Re-enable scroll on cleanup/unmount
         return () => {
             document.body.style.overflow = "";
         };
@@ -37,35 +34,52 @@ export default function MobileMenu({ onClose }) {
                     </button>
                 </div>
                 <ul className="menu">
-                    {navItems.map((item) =>
+                    {navItems.map((item, i) =>
                         item.children ? (
-                            <li key={item.label}>
+                            <li key={`${item.label}-${i}`}>
                                 <details className="focus:outline-none focus:ring-0">
                                     <summary className="cursor-pointer focus:outline-none focus:ring-0">
                                         {item.label}
                                     </summary>
-                                    <ul>
-                                        {item.children.map((child) => (
-                                            <li key={child.label}>
-                                                <Link
-                                                    href={child.href}
-                                                    className="focus:outline-none focus:ring-0"
-                                                >
-                                                    {child.label}
-                                                </Link>
+                                    <ul className="pl-4">
+                                        {item.children.map((group, j) => (
+                                            <li key={`${group.groupLabel}-${j}`} className="mb-2">
+                                                <p className="font-semibold">{group.groupLabel}</p>
+                                                <ul className="pl-4">
+                                                    {group.items.map((child, k) => (
+                                                        <li key={`${child.label}-${k}`}>
+                                                            {child.href ? (
+                                                                <Link
+                                                                    href={child.href}
+                                                                    className="focus:outline-none focus:ring-0"
+                                                                >
+                                                                    {child.label}
+                                                                </Link>
+                                                            ) : (
+                                                                <span className="cursor-default">
+                                                                    {child.label}
+                                                                </span>
+                                                            )}
+                                                        </li>
+                                                    ))}
+                                                </ul>
                                             </li>
                                         ))}
                                     </ul>
                                 </details>
                             </li>
                         ) : (
-                            <li key={item.label}>
-                                <Link
-                                    href={item.href}
-                                    className="focus:outline-none focus:ring-0"
-                                >
-                                    {item.label}
-                                </Link>
+                            <li key={`${item.label}-${i}`}>
+                                {item.href ? (
+                                    <Link
+                                        href={item.href}
+                                        className="focus:outline-none focus:ring-0"
+                                    >
+                                        {item.label}
+                                    </Link>
+                                ) : (
+                                    <span className="cursor-default">{item.label}</span>
+                                )}
                             </li>
                         )
                     )}

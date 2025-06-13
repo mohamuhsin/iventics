@@ -45,7 +45,7 @@ export default function Footer() {
                             ICT Services and Solutions
                         </Link>
                         <Link href="#" className="link link-hover text-base">
-                            Telecom Services and Solutions
+                            Fiber and Telecom Services
                         </Link>
                     </nav>
                     <nav>

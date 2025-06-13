@@ -2,10 +2,20 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { navItems } from "./navConfig";
 import Brand from "./Brand";
 import ThemeToggle from "./ThemeToggle";
-import { navItems } from "./navConfig";
 import MobileMenu from "./MobileMenu";
+import {
+    MessageSquareText,
+    Vote,
+    LayoutDashboard,
+    HeartHandshake,
+    Laptop,
+    Link as LinkIcon,
+    Cpu,
+    Wifi,
+} from "lucide-react";
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -69,21 +79,38 @@ export default function Navbar() {
                                         />
                                     </svg>
                                 </div>
-                                <ul
+
+                                {/* Mega menu for Services & Solutions */}
+                                <div
                                     tabIndex={0}
-                                    className="dropdown-content z-50 mt-2 bg-base-100 rounded-box shadow w-52"
+                                    className="dropdown-content z-50 mt-2 bg-base-100 rounded-box shadow p-6 w-[650px]"
                                 >
-                                    {item.children.map((child) => (
-                                        <li key={child.label}>
-                                            <Link
-                                                href={child.href}
-                                                className="px-4 py-2 hover:bg-base-200"
-                                            >
-                                                {child.label}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
+                                    <div className="grid grid-cols-2 gap-6">
+                                        {item.children.map((group) =>
+                                            group.items.map(({ label, href, description }) => (
+                                                <Link
+                                                    key={label}
+                                                    href={href}
+                                                    className="hover:bg-base-200 px-3 py-2 rounded flex gap-3 items-start transition"
+                                                >
+                                                    <div className="text-primary mt-1">
+                                                        {getIcon(label)}
+                                                    </div>
+                                                    <div className="space-y-0.5">
+                                                        <div className="font-semibold text-base">
+                                                            {label}
+                                                        </div>
+                                                        {description && (
+                                                            <p className="text-sm text-base-content/70 leading-snug">
+                                                                {description}
+                                                            </p>
+                                                        )}
+                                                    </div>
+                                                </Link>
+                                            ))
+                                        )}
+                                    </div>
+                                </div>
                             </li>
                         ) : (
                             <li key={item.label}>
@@ -107,4 +134,32 @@ export default function Navbar() {
             )}
         </nav>
     );
+}
+
+// Helper: Match label to icon for both Services and Solutions
+function getIcon(label) {
+    switch (label) {
+        // Solutions
+        case "SMS Platform":
+            return <MessageSquareText className="w-5 h-5" />;
+        case "Voting Platform":
+            return <Vote className="w-5 h-5" />;
+        case "PMS Platform":
+            return <LayoutDashboard className="w-5 h-5" />;
+        case "Charity Platform":
+            return <HeartHandshake className="w-5 h-5" />;
+
+        // Services
+        case "Web & Mobile Apps":
+            return <Laptop className="w-5 h-5" />;
+        case "API & Payment Integration":
+            return <LinkIcon className="w-5 h-5" />;
+        case "ICT Services & Solutions":
+            return <Cpu className="w-5 h-5" />;
+        case "Fiber and Telecom Services":
+            return <Wifi className="w-5 h-5" />;
+
+        default:
+            return null;
+    }
 }
