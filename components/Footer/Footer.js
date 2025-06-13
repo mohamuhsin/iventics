@@ -4,10 +4,6 @@ import Link from "next/link";
 import ThemeToggle from "../Navbar/ThemeToggle";
 
 export default function Footer() {
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
     return (
         <>
             <footer className="bg-base-200 text-base-content font-sans">
@@ -107,16 +103,6 @@ export default function Footer() {
                     <ThemeToggle />
                 </div>
             </footer>
-
-            {/* Back to Top Button */}
-            <button
-                onClick={scrollToTop}
-                aria-label="Back to top"
-                type="button"
-                className="btn btn-primary btn-circle fixed bottom-6 right-6 z-[9999] shadow-lg hover:scale-110 transition"
-            >
-                ↑
-            </button>
         </>
     );
 }
