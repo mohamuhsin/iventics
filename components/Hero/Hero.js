@@ -60,7 +60,7 @@ export default function Hero() {
                     </p>
 
                     <p className="text-sm italic text-base-content/60">
-                        Powering Africa&apos;s digital future — one solution at a time.
+                        Powering Africa's digital future — one solution at a time.
                     </p>
 
                     <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">

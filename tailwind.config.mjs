@@ -1,24 +1,24 @@
+// tailwind.config.js
 import daisyui from "daisyui";
 
 export default {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,jsx,ts,tsx,mdx}",
+    "./components/**/*.{js,jsx,ts,tsx,mdx}",
+    "./pages/**/*.{js,jsx,ts,tsx,mdx}",
   ],
-  darkMode: "class", // Ensure class-based dark mode
+  darkMode: "class",
   theme: {
     extend: {
-      // optional customizations here
-    },
-    keyframes: {
-      pulseCustom: {
-        "0%, 100%": { transform: "scale(1)" },
-        "50%": { transform: "scale(1.1)" },
+      keyframes: {
+        pulseCustom: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.1)" },
+        },
       },
-    },
-    animation: {
-      pulseCustom: "pulseCustom 1.5s infinite",
+      animation: {
+        pulseCustom: "pulseCustom 1.5s infinite",
+      },
     },
   },
   plugins: [daisyui],
