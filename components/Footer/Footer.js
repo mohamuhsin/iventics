@@ -28,11 +28,7 @@ export default function Footer() {
                         <p className="text-base leading-relaxed">
                             IVENTICS TECHNOLOGIES LTD
                             <br />
-                            Simplifying Lives through
-                            <br />
-                            Digital Innovative Solutions and
-                            <br />
-                            Trusted ICT Services and Solutions.
+                            Simplifying Lives digitally.
                         </p>
                     </aside>
                     <nav>
