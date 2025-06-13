@@ -96,7 +96,10 @@ export default function Hero() {
                 </div>
 
                 {/* Right Side: Feature Cards */}
-                <div className="grid grid-cols-2 gap-6 sm:gap-8" data-aos="fade-left">
+                <div
+                    className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8"
+                    data-aos="fade-left"
+                >
                     <FeatureCard
                         icon={<ShieldCheck className="w-6 h-6 text-primary" />}
                         title="Secure Systems"
@@ -123,14 +126,16 @@ export default function Hero() {
             {/* Scroll Down Hint */}
             <div
                 className="
-          absolute bottom-6 left-1/2 -translate-x-1/2 
-          text-base-content/50 
-          select-none 
-          pointer-events-none 
-          animate-bounce
-          text-sm
-          font-semibold
-        "
+    absolute bottom-6 left-1/2 -translate-x-1/2 
+    text-base-content/50 
+    select-none 
+    pointer-events-none 
+    animate-bounce
+    text-sm
+    font-semibold
+    text-center
+    w-full max-w-fit px-4
+  "
                 aria-hidden="true"
             >
                 ↓ Scroll to explore
