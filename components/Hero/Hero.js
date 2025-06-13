@@ -14,7 +14,11 @@ import {
 
 export default function Hero() {
     useEffect(() => {
-        AOS.init({ duration: 800, once: true });
+        AOS.init({
+            duration: 800,
+            once: true,
+            disable: () => window.innerWidth < 640, // Disable AOS on mobile devices
+        });
     }, []);
 
     return (
@@ -126,16 +130,16 @@ export default function Hero() {
             {/* Scroll Down Hint */}
             <div
                 className="
-    absolute bottom-6 left-1/2 -translate-x-1/2 
-    text-base-content/50 
-    select-none 
-    pointer-events-none 
-    animate-bounce
-    text-sm
-    font-semibold
-    text-center
-    w-full max-w-fit px-4
-  "
+          absolute bottom-6 left-1/2 -translate-x-1/2 
+          text-base-content/50 
+          select-none 
+          pointer-events-none 
+          animate-bounce
+          text-sm
+          font-semibold
+          text-center
+          w-full max-w-fit px-4
+        "
                 aria-hidden="true"
             >
                 ↓ Scroll to explore
