@@ -113,22 +113,7 @@ export default function Footer() {
                 onClick={scrollToTop}
                 aria-label="Back to top"
                 type="button"
-                className="
-          fixed bottom-6 right-6 z-[9999]
-          w-12 h-12
-          bg-gray-900 text-white
-          dark:bg-gray-100 dark:text-gray-900
-          rounded-full
-          shadow-md
-          flex items-center justify-center
-          transition-colors duration-300 ease-in-out
-          hover:bg-gray-700 dark:hover:bg-gray-300
-          focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2
-          cursor-pointer select-none
-          text-2xl
-          font-semibold
-          leading-none
-        "
+                className="btn btn-primary btn-circle fixed bottom-6 right-6 z-[9999] shadow-lg hover:scale-110 transition"
             >
                 ↑
             </button>
