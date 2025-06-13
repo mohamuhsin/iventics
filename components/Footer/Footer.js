@@ -49,16 +49,16 @@ export default function Footer() {
                             Solutions
                         </h6>
                         <Link href="#" className="link link-hover text-base">
-                            SMS Plaform
+                            Messaging Platform
                         </Link>
                         <Link href="#" className="link link-hover text-base">
-                            Voting Plaform
+                            Payments Platform
                         </Link>
                         <Link href="#" className="link link-hover text-base">
-                            PMS Plaform
+                            Voting Platform
                         </Link>
                         <Link href="#" className="link link-hover text-base">
-                            Charity Plaform
+                            PMS Platform
                         </Link>
                     </nav>
                     <nav>

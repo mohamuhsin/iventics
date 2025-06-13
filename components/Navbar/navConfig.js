@@ -7,6 +7,8 @@ import {
     Link as LinkIcon,
     Cpu,
     Wifi,
+    CreditCard,
+    Wallet,
 } from "lucide-react";
 
 export const navItems = [
@@ -60,10 +62,17 @@ export const navItems = [
                 groupLabel: "Platforms",
                 items: [
                     {
-                        label: "SMS Platform",
+                        label: "Messaging Platform",
                         href: "/solutions/sms-platform",
                         icon: MessageSquareText,
                         description: "Send bulk SMS with ease and analytics.",
+                    },
+                    {
+                        label: "Payments Platform",
+                        href: "/solutions/payments-platform",
+                        icon: Wallet,
+                        description:
+                            "Collect, manage, and track mobile money payments with ease.",
                     },
                     {
                         label: "Voting Platform",
@@ -76,12 +85,6 @@ export const navItems = [
                         href: "/solutions/pms-platform",
                         icon: ServerCog,
                         description: "Manage projects, tasks, and progress.",
-                    },
-                    {
-                        label: "Charity Platform",
-                        href: "/solutions/charity-platform",
-                        icon: HeartHandshake,
-                        description: "Accept and track donations seamlessly.",
                     },
                 ],
             },

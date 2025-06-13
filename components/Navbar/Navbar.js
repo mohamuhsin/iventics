@@ -10,11 +10,12 @@ import {
     MessageSquareText,
     Vote,
     LayoutDashboard,
-    HeartHandshake,
+    CreditCard,
     Laptop,
     Link as LinkIcon,
     Cpu,
     Wifi,
+    Wallet,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -140,14 +141,14 @@ export default function Navbar() {
 function getIcon(label) {
     switch (label) {
         // Solutions
-        case "SMS Platform":
+        case "Messaging Platform":
             return <MessageSquareText className="w-5 h-5" />;
         case "Voting Platform":
             return <Vote className="w-5 h-5" />;
         case "PMS Platform":
             return <LayoutDashboard className="w-5 h-5" />;
-        case "Charity Platform":
-            return <HeartHandshake className="w-5 h-5" />;
+        case "Payments Platform":
+            return <Wallet className="w-5 h-5" />;
 
         // Services
         case "Web & Mobile Apps":
