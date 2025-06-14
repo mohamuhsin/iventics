@@ -90,7 +90,7 @@ export default function Footer() {
                             Cookie policy
                         </Link>
                         <Link
-                            href="/accessibility-statement"
+                            href="/site-accessiility"
                             className="link link-hover text-base"
                         >
                             Accessibility Statement
