@@ -74,8 +74,8 @@ export default function Footer() {
                         <Link href="/case-studies" className="link link-hover text-base">
                             Case Studies
                         </Link>
-                        <Link href="/testimonials" className="link link-hover text-base">
-                            Testimonials
+                        <Link href="/client-feedback" className="link link-hover text-base">
+                            Client Feedback
                         </Link>
                     </nav>
                     <nav>

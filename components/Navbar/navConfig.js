@@ -92,6 +92,6 @@ export const navItems = [
     },
 
     { label: "Case Studies", href: "/case-studies" },
-    { label: "Testimonials", href: "/testimonials" },
+    { label: "Client Feedback", href: "/client-feedback" },
     { label: "Contact", href: "/contact" },
 ];
