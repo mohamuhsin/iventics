@@ -16,7 +16,7 @@ export default function PageHeader({ title, subtitle }) {
     return (
         <div
             className="relative w-full bg-mesh-grid overflow-hidden border-b border-base-300 shadow-sm
-            py-24 sm:py-32 px-6"
+            py-24 sm:py-32 px-6 sm:px-12 lg:px-24"
         >
             {/* Gradient overlay */}
             <div

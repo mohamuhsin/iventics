@@ -4,7 +4,7 @@ export default function TestimonialsPage() {
     return (
         <>
             <PageHeader
-                title="Testimonials"
+                title="Testimonies"
                 subtitle="See how clients trust us to deliver dependable, tailored digital solutions."
             />
             {/* Rest of your Testimonials page content */}
