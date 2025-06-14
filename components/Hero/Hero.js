@@ -58,7 +58,7 @@ export default function Hero() {
                     </h1>
 
                     <p className="text-lg md:text-xl text-base-content/70 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                        We simplify lives through innovative digital platforms, intuitive
+                        We simplify lives through innovative digital solutions, intuitive
                         mobile apps, and seamless payment systems — backed by trusted ICT
                         services that empower businesses across Africa.
                     </p>

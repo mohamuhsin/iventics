@@ -30,7 +30,7 @@ export default function PageHeader({ title, subtitle }) {
                     className="backdrop-blur-sm bg-base-100/80 dark:bg-neutral/60 rounded-xl p-6 sm:p-10 inline-block"
                     data-aos="fade-right"
                 >
-                    <h1 className="text-5xl sm:text-6xl md:text-[4.5rem] font-extrabold tracking-tight text-base-content dark:text-white leading-tight">
+                    <h1 className="whitespace-nowrap text-5xl sm:text-6xl md:text-[4.5rem] font-extrabold tracking-tight text-base-content dark:text-white leading-tight">
                         {title}
                     </h1>
 
