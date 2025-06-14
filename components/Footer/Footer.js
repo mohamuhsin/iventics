@@ -65,31 +65,34 @@ export default function Footer() {
                         <h6 className="footer-title text-base font-semibold mb-2">
                             Company
                         </h6>
-                        <Link href="#" className="link link-hover text-base">
+                        <Link href="/about" className="link link-hover text-base">
                             About Us
                         </Link>
-                        <Link href="#" className="link link-hover text-base">
+                        <Link href="/contact" className="link link-hover text-base">
                             Contact
                         </Link>
-                        <Link href="#" className="link link-hover text-base">
+                        <Link href="/case-studies" className="link link-hover text-base">
                             Case Studies
                         </Link>
-                        <Link href="#" className="link link-hover text-base">
+                        <Link href="/testimonials" className="link link-hover text-base">
                             Testimonials
                         </Link>
                     </nav>
                     <nav>
                         <h6 className="footer-title text-base font-semibold mb-2">Legal</h6>
-                        <Link href="#" className="link link-hover text-base">
+                        <Link href="/terms-of-use" className="link link-hover text-base">
                             Terms of use
                         </Link>
-                        <Link href="#" className="link link-hover text-base">
+                        <Link href="/privacy-policy" className="link link-hover text-base">
                             Privacy policy
                         </Link>
-                        <Link href="#" className="link link-hover text-base">
+                        <Link href="/cookie-policy" className="link link-hover text-base">
                             Cookie policy
                         </Link>
-                        <Link href="#" className="link link-hover text-base">
+                        <Link
+                            href="/accessibility-statement"
+                            className="link link-hover text-base"
+                        >
                             Accessibility Statement
                         </Link>
                     </nav>
