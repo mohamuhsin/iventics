@@ -110,17 +110,17 @@ export default function Hero() {
                         description="We build robust, secure digital systems that protect your data and ensure uptime."
                     />
                     <FeatureCard
-                        icon={<Smartphone className="w-6 h-6 text-secondary" />}
+                        icon={<Smartphone className="w-6 h-6 text-primary" />}
                         title="Mobile-First Apps"
                         description="Our apps are fast, modern, and optimized for all devices and screen sizes."
                     />
                     <FeatureCard
-                        icon={<ServerCog className="w-6 h-6 text-accent" />}
+                        icon={<ServerCog className="w-6 h-6 text-primary" />}
                         title="Custom ICT Solutions"
                         description="We tailor software and IT services that simplify workflows and increase efficiency."
                     />
                     <FeatureCard
-                        icon={<CreditCard className="w-6 h-6 text-info" />}
+                        icon={<CreditCard className="w-6 h-6 text-primary" />}
                         title="Seamless Payments"
                         description="We integrate mobile money, billing systems, and APIs with smooth user flows."
                     />
