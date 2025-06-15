@@ -10,7 +10,6 @@ import {
     MessageSquareText,
     Vote,
     LayoutDashboard,
-    CreditCard,
     Laptop,
     Link as LinkIcon,
     Cpu,

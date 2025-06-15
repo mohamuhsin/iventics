@@ -2,12 +2,10 @@ import {
     MessageSquareText,
     Vote,
     ServerCog,
-    HeartHandshake,
     Laptop,
     Link as LinkIcon,
     Cpu,
     Wifi,
-    CreditCard,
     Wallet,
 } from "lucide-react";
 
